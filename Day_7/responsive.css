@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f6f8;
+  color: #222;
+}
+
+img {
+  max-width: 100%;          /* images never overflow */
+  height: auto;
+}
+
+.site-header,
+footer {
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- Desktop (default) ---------- */
+.layout {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.sidebar {
+  flex: 0 0 220px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 0;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.content {
+  flex: 1;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  flex: 1;                  /* 4 boxes in one row */
+  background: #dbeafe;
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.stat strong {
+  font-size: 1.6rem;
+  color: #1e3a8a;
+}
+
+.article {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.article h2 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 900px) {
+  .stats {
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    flex: 1 1 40%;          /* 2 boxes per row */
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .layout {
+    flex-direction: column; /* sidebar goes above content */
+  }
+
+  .sidebar {
+    flex-basis: auto;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .stat {
+    flex: 1 1 100%;         /* 1 box per row */
+  }
+
+  .site-header h1 {
+    font-size: 1.4rem;
+  }
+}

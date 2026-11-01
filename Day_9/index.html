@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 9 | Interactive Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Interactive JavaScript Page</h1>
+    <button id="themeBtn">Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <!-- Button click events -->
+    <section>
+      <h2>1. Counter (button click)</h2>
+      <p class="count">Count: <span id="count">0</span></p>
+      <div class="row">
+        <button id="incBtn">+</button>
+        <button id="decBtn">-</button>
+        <button id="resetBtn" class="secondary">Reset</button>
+      </div>
+    </section>
+
+    <!-- Form submission event -->
+    <section>
+      <h2>2. Add a Student (form submit)</h2>
+      <form id="studentForm">
+        <input type="text" id="nameInput" placeholder="Name" required>
+        <input type="text" id="courseInput" placeholder="Course" required>
+        <input type="number" id="marksInput" placeholder="Marks (0-100)" min="0" max="100" required>
+        <button type="submit">Add</button>
+      </form>
+      <p id="formMsg" class="msg"></p>
+    </section>
+
+    <!-- Dynamic data, filtering, searching -->
+    <section>
+      <h2>3. Student List (search and filter)</h2>
+      <div class="row">
+        <input type="search" id="searchInput" placeholder="Search by name or course">
+        <select id="filterSelect">
+          <option value="all">All</option>
+          <option value="pass">Pass (40+)</option>
+          <option value="fail">Fail (below 40)</option>
+        </select>
+      </div>
+      <p id="stats" class="stats"></p>
+      <ul id="studentList"></ul>
+    </section>
+
+    <!-- Fetch API -->
+    <section>
+      <h2>4. Users from an API (fetch)</h2>
+      <button id="loadBtn">Load Users</button>
+      <p id="apiStatus" class="msg"></p>
+      <ul id="userList"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
